@@ -27,3 +27,16 @@ h5 {
 button {
   font-family: "Montserrat", sans-serif;
 }
+
+// hr::after {
+//   content: "";
+//   position: relative;
+//   display: block;
+//   height: 4px;
+//   width: 100%;
+//   background-color: yellowgreen;
+//   transform: scaleX(1);
+//   transform-origin: 0%;
+//   transition: transform 500ms ease;
+//   top: 2px;
+// }

@@ -1,5 +1,11 @@
 .btn-section {
   margin-top: 3rem;
+  width: 50vw;
+  display: block;
+}
+
+.btn-section > button {
+  margin: 0.5rem;
 }
 
 // Btn Mixin
@@ -30,11 +36,97 @@
 }
 
 .get {
+  $bg: #4385ff;
+
   color: white;
-  background: #4385ff;
+  background: $bg;
 
   @include btn(
-    0px 4px 8px rgba($color: #4385ff, $alpha: 0.25),
-    0px 8px 16px rgba($color: #4385ff, $alpha: 0.25)
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.5)
+  );
+}
+
+.post {
+  $bg: #d343ff;
+
+  color: rgb(0, 0, 0);
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.5)
+  );
+}
+
+.update {
+  $bg: #ff9843;
+
+  color: rgb(0, 0, 0);
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.5)
+  );
+}
+
+.delete {
+  $bg: #4643ff;
+
+  color: white;
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.35)
+  );
+}
+
+.multi-fetch {
+  $bg: #ff55f6;
+
+  color: rgb(0, 0, 0);
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.35)
+  );
+}
+
+.custom-headers {
+  $bg: #55ff5d;
+
+  color: rgb(0, 0, 0);
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.35)
+  );
+}
+
+.transform {
+  $bg: #1a1a1a;
+
+  color: white;
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.35)
+  );
+}
+
+.error-handling {
+  $bg: #1300c2;
+
+  color: white;
+  background: $bg;
+
+  @include btn(
+    0px 4px 8px rgba($color: $bg, $alpha: 0.25),
+    0px 16px 32px rgba($color: $bg, $alpha: 0.35)
   );
 }

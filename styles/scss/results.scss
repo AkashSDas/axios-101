@@ -1,5 +1,6 @@
 .fetch-results-section {
   margin-top: 3rem;
+  width: 50vw;
 }
 
 .fetch-results-section h3 {
@@ -29,5 +30,6 @@
 
   .card-body {
     padding: 0.5rem;
+    overflow-x: scroll;
   }
 }
