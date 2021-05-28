@@ -26,7 +26,8 @@ export async function getTodos() {
 
     /// Axios by default will be GET request
     const results = await axios(
-      "https://jsonplaceholder.typicode.com/todos?_limit=5"
+      "https://jsonplaceholder.typicode.com/todos?_limit=5",
+      { timeout: 5000 }
     );
 
     console.log(`GET Status: ${results.status}`);

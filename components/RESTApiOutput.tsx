@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
-import { getTodos } from "../helper/get";
 
-function GetOutput() {
+interface RESTApiOutputProps {
+  fetchFunction: Function;
+  successStatusCode: number;
+}
+
+function RESTApiOutput({
+  fetchFunction,
+  successStatusCode,
+}: RESTApiOutputProps) {
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const getRequest = async () => {
-    const results = await getTodos();
+  const request = async () => {
+    const results = await fetchFunction();
     setResults(results);
   };
 
   useEffect(() => {
     setLoading(true);
-    getRequest();
+    request();
     setLoading(false);
   }, []);
 
@@ -23,7 +30,7 @@ function GetOutput() {
         <h3>Loading...</h3>
       </section>
     );
-  else if (results.status === 200) {
+  else if (results.status === successStatusCode) {
     return (
       <section className="fetch-results-section">
         <Status status={results.status} />
@@ -65,4 +72,4 @@ function Status({ status }: { status: string }) {
   );
 }
 
-export default GetOutput;
+export default RESTApiOutput;
